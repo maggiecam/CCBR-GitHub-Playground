@@ -7,7 +7,7 @@
 #' 
 
 Simple_adder_plus <- function (item_1, item_2){
-  
+  print("message")
   turn_numeric <- function (input){
     if (suppressWarnings(all(!is.na(as.numeric(as.character(input)))))) {
       output <- as.numeric(as.character(input))
@@ -20,7 +20,7 @@ Simple_adder_plus <- function (item_1, item_2){
   if (class(turn_numeric(item_1)) != "numeric" || class(turn_numeric(item_2)) != "numeric"){
     return_item <- paste0(toString(item_1),toString(item_2),"_Plus")
   }else{
-    return_item <- turn_numeric(item_1) + turn_numeric(item_2) + 1
+    return_item <- turn_numeric(item_1) + turn_numeric(item_2) + 2
   }
   
   return(return_item)
